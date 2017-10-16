@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#009900">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="100px"
+            android:id="@+id/btnFragmentSearch"
+            android:text="@string/find"
+            android:textSize="20sp"
+            android:gravity="left|center"
+            android:textStyle="bold|italic"
+            android:layout_gravity="center"
+            android:drawableLeft="@android:drawable/ic_menu_search"/>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="100px"
+            android:id="@+id/btnFragmentAdd"
+            android:text="@string/add"
+            android:gravity="left|center"
+            android:textStyle="bold|italic"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:drawableLeft="@android:drawable/ic_input_add"/>
+
+    <Button
+        android:id="@+id/btnFragmentHelp"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:layout_gravity="center"
+        android:drawableLeft="@android:drawable/ic_menu_help"
+        android:text="@string/help"
+        android:gravity="left|center"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/btnFragmentSetting"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:layout_gravity="center"
+        android:drawableLeft="@android:drawable/ic_menu_preferences"
+        android:text="@string/setting"
+        android:gravity="left|center"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/btnFragmentInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:layout_gravity="center"
+        android:drawableLeft="@android:drawable/ic_dialog_info"
+        android:text="@string/information"
+        android:gravity="left|center"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/btnFragmentMail"
+        android:layout_width="fill_parent"
+        android:layout_height="100px"
+        android:layout_gravity="center"
+        android:drawableLeft="@android:drawable/sym_action_email"
+        android:text="@string/feedback"
+        android:gravity="left|center"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+</LinearLayout>

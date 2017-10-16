@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">QLTC</string>
+    <string name="information">Thông tin</string>
+    <string name="setting">Cài đặt</string>
+    <string name="add">Thêm mới</string>
+    <string name="find">Tra cứu</string>
+    <string name="help">Hướng dẫn</string>
+    <string name="feedback">Góp ý</string>
+</resources>
