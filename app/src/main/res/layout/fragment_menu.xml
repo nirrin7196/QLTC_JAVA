@@ -2,72 +2,76 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="#009900">
+    >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="#0000"
+            android:textSize="20dp"
+            android:text="Vi Tien"
+            android:id="@+id/frbtnViTien"
+            android:drawableLeft="@drawable/vitien"
+            android:layout_weight="1"/>
 
         <Button
-            android:layout_width="fill_parent"
-            android:layout_height="100px"
-            android:id="@+id/btnFragmentSearch"
-            android:text="@string/find"
-            android:textSize="20sp"
-            android:gravity="left|center"
-            android:textStyle="bold|italic"
-            android:layout_gravity="center"
-            android:drawableLeft="@android:drawable/ic_menu_search"/>
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#0000"
+            android:textSize="20dp"
+            android:text="Thu Chi"
+            android:id="@+id/frbtnThuChi"
+            android:drawableLeft="@drawable/thuchi"/>
+
         <Button
-            android:layout_width="fill_parent"
-            android:layout_height="100px"
-            android:id="@+id/btnFragmentAdd"
-            android:text="@string/add"
-            android:gravity="left|center"
-            android:textStyle="bold|italic"
-            android:textSize="20sp"
-            android:layout_gravity="center"
-            android:drawableLeft="@android:drawable/ic_input_add"/>
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/frbtnTraCuu"
+            android:background="#0000"
+            android:textSize="20dp"
+            android:text="Tra Cuu"
+            android:drawableLeft="@drawable/tracuu"/>
 
-    <Button
-        android:id="@+id/btnFragmentHelp"
-        android:layout_width="fill_parent"
-        android:layout_height="100px"
-        android:layout_gravity="center"
-        android:drawableLeft="@android:drawable/ic_menu_help"
-        android:text="@string/help"
-        android:gravity="left|center"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/frbtnCaiDat"
+            android:background="#0000"
+            android:textSize="20dp"
+            android:text="Cai dat"
+            android:drawableLeft="@drawable/setting"/>
 
-    <Button
-        android:id="@+id/btnFragmentSetting"
-        android:layout_width="fill_parent"
-        android:layout_height="100px"
-        android:layout_gravity="center"
-        android:drawableLeft="@android:drawable/ic_menu_preferences"
-        android:text="@string/setting"
-        android:gravity="left|center"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="#0000"
+            android:textSize="20dp"
+            android:text="Giup do"
+            android:id="@+id/frbtnGiupDo"
+            android:drawableLeft="@drawable/help"/>
 
-    <Button
-        android:id="@+id/btnFragmentInfo"
-        android:layout_width="fill_parent"
-        android:layout_height="100px"
-        android:layout_gravity="center"
-        android:drawableLeft="@android:drawable/ic_dialog_info"
-        android:text="@string/information"
-        android:gravity="left|center"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/frbtnThongTin"
+            android:background="#0000"
+            android:textSize="20dp"
+            android:text="Thong Tin"
+            android:drawableLeft="@drawable/thongtin"/>
 
-    <Button
-        android:id="@+id/btnFragmentMail"
-        android:layout_width="fill_parent"
-        android:layout_height="100px"
-        android:layout_gravity="center"
-        android:drawableLeft="@android:drawable/sym_action_email"
-        android:text="@string/feedback"
-        android:gravity="left|center"
-        android:textSize="20sp"
-        android:textStyle="bold|italic" />
+        <Button
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:id="@+id/frbtnPhanHoi"
+            android:background="#0000"
+            android:textSize="20dp"
+            android:text="Phan hoi"
+            android:drawableLeft="@drawable/phanhoi"/>
 </LinearLayout>
