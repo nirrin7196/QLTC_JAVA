@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".InMoneyMany">
         </activity>
+        <activity android:name=".out_money">
+        </activity>
     </application>
 
 </manifest>
