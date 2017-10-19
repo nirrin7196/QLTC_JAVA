@@ -21,10 +21,19 @@
             android:layout_weight="1"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Thu Chi"
-            android:id="@+id/frbtnThuChi"
-            android:drawableLeft="@drawable/thuchi"/>
+            android:text="Thu"
+            android:id="@+id/frbtnThu"
+            android:drawableLeft="@drawable/addmoney"/>
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#0000"
+            android:textSize="20dp"
+            android:text="Chi"
+            android:id="@+id/frbtnChi"
+            android:drawableLeft="@drawable/chi"/>
         <Button
             android:layout_weight="1"
             android:layout_width="wrap_content"

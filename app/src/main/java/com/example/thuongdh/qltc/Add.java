@@ -124,14 +124,15 @@ public class Add extends AppCompatActivity {
 
     private void ReadDatabase() {
         Cursor cursor = database.query("TypeTb", null, null, null, null,null,null);
-        arrType.clear();
+       // arrType.clear();
 
         while (cursor.moveToNext())
         {
             int id = cursor.getInt(0);
             String name = cursor.getString(1);
             int icon = cursor.getInt(2);
-            arrType.add(new Wallet_type(icon,name));
+            Toast.makeText(Add.this, id + " " + name + " " + icon, Toast.LENGTH_LONG).show();
+        //    arrType.add(new Wallet_type(icon,name));
         }
         cursor.close();
     }

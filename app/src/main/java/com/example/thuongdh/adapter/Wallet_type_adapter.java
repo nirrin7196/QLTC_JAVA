@@ -14,7 +14,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 /**
  * Created by thuongdh on 17/10/2017.
@@ -36,11 +35,11 @@ public class Wallet_type_adapter extends ArrayAdapter<Wallet_type> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = this.context.getLayoutInflater();
         View row = inflater.inflate(this.resource, null);
-        TextView tvName = row.findViewById(R.id.tv_sp_wallet);
+       // TextView tvName = row.findViewById(R.id.tv_sp_wallet);
         ImageView imIcon = row.findViewById(R.id.image_sp_wallet);
 
         Wallet_type wallet_type = this.object.get(position);
-        tvName.setText(wallet_type.getNameType());
+      //  tvName.setText(wallet_type.getNameType());
 
         if (wallet_type.getImageIconType()==2){
            imIcon.setImageResource(R.drawable.atm);

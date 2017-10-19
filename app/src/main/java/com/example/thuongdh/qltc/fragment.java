@@ -16,7 +16,7 @@ import android.widget.Button;
 
 public class fragment extends Fragment {
     private View myv;
-    Button btnThuChi, btnTraCuu, btnCaiDat, btnViTien, btnGiupDo, btnThongTin, btnPhanHoi;
+    Button btnThu, btnTraCuu, btnCaiDat, btnViTien, btnGiupDo, btnThongTin, btnPhanHoi, btnChi;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -26,8 +26,9 @@ public class fragment extends Fragment {
         btnGiupDo = myv.findViewById(R.id.frbtnGiupDo);
         btnPhanHoi = myv.findViewById(R.id.frbtnPhanHoi);
         btnTraCuu = myv.findViewById(R.id.frbtnTraCuu);
-        btnThuChi = myv.findViewById(R.id.frbtnThuChi);
+        btnThu = myv.findViewById(R.id.frbtnThu);
         btnViTien = myv.findViewById(R.id.frbtnViTien);
+        btnChi = myv.findViewById(R.id.frbtnChi);
         setEvent();
         return myv;
     }
@@ -44,6 +45,13 @@ public class fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), wallet.class);
+                startActivity(intent);
+            }
+        });
+        btnThu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), InMoney.class);
                 startActivity(intent);
             }
         });

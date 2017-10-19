@@ -2,20 +2,17 @@ package com.example.thuongdh.model;
 
 import java.io.Serializable;
 
-import android.media.Image;
-
 /**
  * Created by thuongdh on 17/10/2017.
  */
 
 public class Wallet_name implements Serializable {
     private String Name;
-    private double Money;
-    private Image Icon;
-    public Wallet_name(String name, double money, Image icon) {
+    private int Money;
+    public Wallet_name(String name, int money) {
         Name = name;
         Money = money;
-        Icon = icon;
+
     }
 
 
@@ -33,19 +30,13 @@ public class Wallet_name implements Serializable {
         Name = name;
     }
 
-    public double getMoney() {
+    public int getMoney() {
         return Money;
     }
 
-    public void setMoney(double money) {
+    public void setMoney(int money) {
         Money = money;
     }
 
-    public Image getIcon() {
-        return Icon;
-    }
 
-    public void setIcon(Image icon) {
-        Icon = icon;
-    }
 }
