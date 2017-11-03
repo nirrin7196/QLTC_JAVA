@@ -40,7 +40,7 @@ public class wallet extends AppCompatActivity {
         btnBack = (ImageButton) findViewById(R.id.wlbtnBack);
        // btnDel = (ImageButton) findViewById(R.id.wlbtnDelete);
         btnAdd.setImageResource(R.drawable.addname);
-        btnBack.setImageResource(R.drawable.back);
+        btnBack.setImageResource(R.drawable.bk);
 
     }
 

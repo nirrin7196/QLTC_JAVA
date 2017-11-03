@@ -15,8 +15,8 @@
         android:textAlignment="center"
         android:gravity="center"
         android:textStyle="bold|italic"/>
-    <ImageButton
+    <!--<ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/imbtnDel"/>
+        android:id="@+id/imbtnDel"/>-->
 </LinearLayout>

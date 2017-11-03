@@ -6,6 +6,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class InMoney extends AppCompatActivity {
@@ -24,6 +26,7 @@ public class InMoney extends AppCompatActivity {
     ArrayList<String> arrayListDonVi, arrayListName;
     ArrayAdapter<String> adapterDonVi, adapterName;
     SQLiteDatabase database;
+    TextView tvname, tvtitle, tvdv, tvmoney;
     int id;
     public String Database_name = "QuanLyThuChiDb.sqlite";
     public static final String DB_path = "/databases/";
@@ -33,8 +36,17 @@ public class InMoney extends AppCompatActivity {
         setContentView(R.layout.activity_in_money);
         database = openOrCreateDatabase(Database_name, MODE_PRIVATE, null);
         setId();
+        setfont();
         show2spinner();
         setEvent();
+    }
+
+    private void setfont() {
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/ft.ttf");
+        tvtitle.setTypeface(typeface);
+        tvname.setTypeface(typeface);
+        tvmoney.setTypeface(typeface);
+        tvdv.setTypeface(typeface);
     }
 
     private void show2spinner() {
@@ -100,7 +112,7 @@ public class InMoney extends AppCompatActivity {
                 values.put("Money", money);
                 values.put("DV", dv);
                 database.update("NameListTb", values, "Name=?", new String[] {name});
-                Toast.makeText(InMoney.this, "Da cap nhat", Toast.LENGTH_LONG).show();
+                Toast.makeText(InMoney.this, "Đã cập nhật ", Toast.LENGTH_LONG).show();
             }
         });
         btnAddMany.setOnClickListener(new View.OnClickListener() {
@@ -119,6 +131,10 @@ public class InMoney extends AppCompatActivity {
         spDonVi = (Spinner) findViewById(R.id.spDonViInMoney);
         spVi = (Spinner) findViewById(R.id.spViTienInMoney);
         imbtnBack = (ImageButton) findViewById(R.id.btnBackInMoney);
-        imbtnBack.setImageResource(R.drawable.back);
+        imbtnBack.setImageResource(R.drawable.bk);
+        tvdv = (TextView) findViewById(R.id.tvInMNDv);
+        tvmoney = (TextView) findViewById(R.id.tvInMNMoney);
+        tvname = (TextView) findViewById(R.id.tvInMNName);
+        tvtitle = (TextView) findViewById(R.id.tvInMNTitle);
     }
 }

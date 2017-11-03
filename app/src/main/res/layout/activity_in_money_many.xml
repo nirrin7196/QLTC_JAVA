@@ -10,12 +10,14 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
+    android:background="#ffcc99"
     >
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="#33cc33">
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,7 +27,7 @@
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:textSize="30dp"
-            android:text="Them Khoang Thu"
+            android:text="Thêm khoảng thu "
             android:textAllCaps="true"
             android:textStyle="bold"
             android:gravity="center"/>
@@ -52,7 +54,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:text="Chon Vi Tien: "
+                    android:text="Chọn ví tiền : "
                     android:textSize="20dp"
                     android:textStyle="italic"
                     android:textAlignment="center"/>
@@ -70,7 +72,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:text=" So Tien: "
+                    android:text=" Số tiền : "
                     android:textSize="20dp"
                     android:textStyle="italic"
                     android:textAlignment="center"/>
@@ -109,7 +111,7 @@
         android:gravity="center"
         android:textSize="20dp"
         android:textStyle="italic|bold"
-        android:text="Danh sach cac vi tien"/>
+        android:text="Danh sách các ví tiền "/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
@@ -135,7 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/btnHoanTatInMonyMany"
-            android:text="Hoan Tat"
+            android:text="Hoàn tất "
             android:textSize="15dp"/>
         <LinearLayout
             android:layout_width="0dp"
@@ -145,7 +147,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Xoa Tat Ca"
+            android:text="Xóa tất cả "
             android:id="@+id/btnXoaInMoneyMany"/>
         <LinearLayout
             android:layout_width="0dp"

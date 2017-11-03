@@ -26,6 +26,10 @@
         </activity>
         <activity android:name=".out_money">
         </activity>
+        <activity android:name=".OutMoneyOne">
+        </activity>
+        <activity android:name=".Shopping">
+        </activity>
     </application>
 
 </manifest>

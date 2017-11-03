@@ -9,10 +9,12 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:background="#00FF33">
+        android:background="#ffcc99"
+       >
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
+            android:background="#33cc33"
             android:layout_weight="1">
             <ImageButton
                 android:layout_width="wrap_content"
@@ -23,7 +25,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="4"
                 android:layout_height="wrap_content"
-                android:text="Danh sach vi tien"
+                android:text="Danh sách các ví tiền "
                 android:textSize="30dp"
                 android:textAlignment="center"
                 android:gravity="center"

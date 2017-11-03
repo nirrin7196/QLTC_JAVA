@@ -9,12 +9,14 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="#ffcc99">
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:background="#33cc33">
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -22,12 +24,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Them khoang thu"
+                android:text="Thêm khoảng thu "
                 android:textSize="30dp"
                 android:textAlignment="center"
                 android:textStyle="bold"
                 android:textAllCaps="true"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:id="@+id/tvInMNTitle"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="fill_parent"
@@ -43,11 +46,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Chon vi tien:"
+                    android:text="Chọn ví tiền:"
                     android:textSize="20dp"
                     android:textStyle="italic"
                     android:textAlignment="center"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/tvInMNName"/>
                 <Spinner
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -64,11 +68,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="So Tien:"
+                    android:text="Số tiền :"
                     android:textSize="20dp"
                     android:textAlignment="center"
                     android:textStyle="italic"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/tvInMNMoney"/>
                 <EditText
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -86,11 +91,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Don vi:"
+                    android:text="Đơn vị :"
                     android:textSize="20dp"
                     android:textStyle="italic"
                     android:textAlignment="center"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:id="@+id/tvInMNDv"/>
                 <Spinner
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -114,7 +120,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:id="@+id/btnAddOneInMoney"
-                android:text="Them"
+                android:text="Thêm "
                 android:textSize="15dp"
                 android:textAlignment="center"/>
             <LinearLayout
@@ -126,7 +132,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:id="@+id/btnAddManyInMoney"
-                android:text="Them nhieu"
+                android:text="Thêm nhiều "
                 android:textSize="15dp"
                 android:textAlignment="center"/>
             <LinearLayout

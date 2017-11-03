@@ -13,7 +13,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -41,20 +40,20 @@ public class Wallet_name_adapter extends ArrayAdapter<Wallet_name> {
         ImageView img = row.findViewById(R.id.item_im_lv);
         TextView txtName = row.findViewById(R.id.item_tvName);
         TextView txtMoney = row.findViewById(R.id.item_tvMoney);
-        ImageButton imgbtn = row.findViewById(R.id.item_btn_delete);
+       // ImageButton imgbtn = row.findViewById(R.id.item_btn_delete);
 
         final Wallet_name wallet_name = this.objects.get(position);
         img.setImageResource(R.drawable.atm);
         txtName.setText(wallet_name.getName());
         txtMoney.setText("So tien con lai: "+ Integer.toString(wallet_name.getMoney()));
-        imgbtn.setImageResource(R.drawable.delete);
+        //imgbtn.setImageResource(R.drawable.delete);
 
-        imgbtn.setOnClickListener(new View.OnClickListener() {
+      /*  imgbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 XuLiDelete(wallet_name);
             }
-        });
+        });*/
         return row;
     }
 

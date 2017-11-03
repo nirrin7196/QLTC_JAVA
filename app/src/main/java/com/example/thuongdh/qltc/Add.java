@@ -9,12 +9,14 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Add extends AppCompatActivity {
@@ -22,6 +24,7 @@ public class Add extends AppCompatActivity {
     Spinner spType;
     Button btnSave, btnCancel;
     ArrayList<Wallet_type> arrType;
+    TextView tvName, tvTitle, tvMoney;
     String Name;
     int Money =0;
     int id;
@@ -34,7 +37,19 @@ public class Add extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
         setID();
+        setFont();
         setEvent();
+    }
+
+    private void setFont() {
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/ft.ttf");
+        tvTitle.setTypeface(typeface);
+        tvName.setTypeface(typeface);
+        tvMoney.setTypeface(typeface);
+        edtMoney.setTypeface(typeface);
+        edtName.setTypeface(typeface);
+        btnCancel.setTypeface(typeface);
+        btnSave.setTypeface(typeface);
     }
 
     private void setEvent() {
@@ -70,11 +85,11 @@ public class Add extends AppCompatActivity {
             public void onClick(View view) {
                 try {
                     Save();
-                    Toast.makeText(Add.this, "Da Them thanh cong", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Add.this, "Đã thêm 1 ví tiền ", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(Add.this, wallet.class);
                     startActivity(intent);
                 } catch (Exception e) {
-                    Toast.makeText(Add.this, "da xay ra loi", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Add.this, "Vui lòng nhập đầy đủ thông tin ", Toast.LENGTH_LONG).show();
 
                 }
             }
@@ -86,7 +101,7 @@ public class Add extends AppCompatActivity {
             AddToDatabase();
        }else
        {
-           Toast.makeText(Add.this, "Vui long nhap day du thong tin", Toast.LENGTH_LONG).show();
+           Toast.makeText(Add.this, "Vui lòng nhập đầy đủ thông tin ", Toast.LENGTH_LONG).show();
        }
 
     }
@@ -149,6 +164,8 @@ public class Add extends AppCompatActivity {
         btnCancel = (Button) findViewById(R.id.btnAddCancel);
         btnSave = (Button) findViewById(R.id.btnAddSave);
         arrType = new ArrayList<Wallet_type>();
-
+        tvMoney = (TextView) findViewById(R.id.tvAddSoTien);
+        tvName = (TextView) findViewById(R.id.tvAddTenViTien);
+        tvTitle = (TextView) findViewById(R.id.tvTitleViTien);
     }
 }

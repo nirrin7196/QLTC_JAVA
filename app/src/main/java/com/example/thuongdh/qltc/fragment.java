@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 
@@ -29,10 +30,22 @@ public class fragment extends Fragment {
         btnThu = myv.findViewById(R.id.frbtnThu);
         btnViTien = myv.findViewById(R.id.frbtnViTien);
         btnChi = myv.findViewById(R.id.frbtnChi);
+        //setFont();
         setEvent();
         return myv;
     }
 
+   /* private void setFont() {
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/ft.ttf");
+        btnCaiDat.setTypeface(typeface);
+        btnChi.setTypeface(typeface);
+        btnGiupDo.setTypeface(typeface);
+        btnPhanHoi.setTypeface(typeface);
+        btnThongTin.setTypeface(typeface);
+        btnThu.setTypeface(typeface);
+        btnViTien.setTypeface(typeface);
+        btnTraCuu.setTypeface(typeface);
+    }*/
     private void setEvent() {
         btnCaiDat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,6 +65,13 @@ public class fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), InMoney.class);
+                startActivity(intent);
+            }
+        });
+        btnChi.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), out_money.class);
                 startActivity(intent);
             }
         });

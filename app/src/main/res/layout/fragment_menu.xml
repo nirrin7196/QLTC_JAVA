@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent"
+    android:layout_height="fill_parent"
     >
         <Button
             android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Vi Tien"
+            android:text="Ví tiền "
             android:id="@+id/frbtnViTien"
             android:drawableLeft="@drawable/vitien"
             android:layout_weight="1"/>
@@ -41,7 +41,7 @@
             android:id="@+id/frbtnTraCuu"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Tra Cuu"
+            android:text="Tra Cứu "
             android:drawableLeft="@drawable/tracuu"/>
 
         <Button
@@ -51,7 +51,7 @@
             android:id="@+id/frbtnCaiDat"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Cai dat"
+            android:text="Cài đặt "
             android:drawableLeft="@drawable/setting"/>
 
         <Button
@@ -60,7 +60,7 @@
             android:layout_height="0dp"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Giup do"
+            android:text="Giúp đỡ "
             android:id="@+id/frbtnGiupDo"
             android:drawableLeft="@drawable/help"/>
 
@@ -71,7 +71,7 @@
             android:id="@+id/frbtnThongTin"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Thong Tin"
+            android:text="Thông  Tin"
             android:drawableLeft="@drawable/thongtin"/>
 
         <Button
@@ -81,6 +81,6 @@
             android:id="@+id/frbtnPhanHoi"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Phan hoi"
+            android:text="Phản hồi "
             android:drawableLeft="@drawable/phanhoi"/>
 </LinearLayout>

@@ -34,14 +34,14 @@
                 android:id="@+id/item_tvMoney"
                 android:textSize="18dp"/>
         </LinearLayout>
-        <ImageButton
+     <!--   <ImageButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:id="@+id/item_btn_delete"
             android:layout_marginRight="10dp"
             android:layout_gravity="right"
-            />
+            />-->
     </LinearLayout>
     <TextView
         android:layout_width="match_parent"

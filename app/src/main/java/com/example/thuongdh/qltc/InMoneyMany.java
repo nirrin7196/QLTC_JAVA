@@ -63,7 +63,7 @@ public class InMoneyMany extends AppCompatActivity {
                         money += old;
                         value.put("Money", money);
                         database.update("NameListTb", value, "Name=?", new String[]{name});
-                        Toast.makeText(InMoneyMany.this, "Da cap nhat", Toast.LENGTH_LONG).show();
+                        Toast.makeText(InMoneyMany.this, "Đã cập nhật ", Toast.LENGTH_LONG).show();
                     }
             }
         });
@@ -108,7 +108,7 @@ public class InMoneyMany extends AppCompatActivity {
                     saveValues.add(name + ";" + money);
                     index++;
                 } catch (Exception e) {
-                    Toast.makeText(InMoneyMany.this, "Vui long nhap day du thong tin", Toast.LENGTH_LONG).show();
+                    Toast.makeText(InMoneyMany.this, "Vui lòng nhập đầy đủ thông tin ", Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -160,7 +160,7 @@ public class InMoneyMany extends AppCompatActivity {
         spName = (Spinner) findViewById(R.id.spNameInManyMoney);
         edtMoney = (EditText) findViewById(R.id.edtSoTienInMoneyMany);
         listView = (ListView) findViewById(R.id.lvInMonyMany);
-        imbtnBack.setImageResource(R.drawable.back);
+        imbtnBack.setImageResource(R.drawable.bk);
         imgbtnAdd.setImageResource(R.drawable.addname);
     }
 }
