@@ -25,7 +25,7 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
-                android:text="Nhập thông tin số tiền chi"
+                android:text="@string/Insert_detail_info"
                 android:textAlignment="center"
                 android:textSize="30dp"
                 android:textStyle="bold"
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_height="match_parent"
-                android:text="Tên khoảng thu : "
+                android:text="@string/TypeMoney"
                 android:textAlignment="center"
                 android:textSize="20dp"
                 android:textStyle="italic"
@@ -69,7 +69,7 @@
                 android:layout_marginLeft="20dp"
                 android:textAlignment="center"
                 android:textSize="20dp"
-                android:text="Chọn ví tiền  "
+                android:text="@string/Chose_wallet"
                 android:textStyle="italic"
                 android:gravity="center"/>
             <Spinner
@@ -92,7 +92,7 @@
                 android:layout_marginLeft="20dp"
                 android:textAlignment="center"
                 android:textSize="20dp"
-                android:text="Số tiền "
+                android:text="@string/Money"
                 android:textStyle="italic"
                 android:gravity="center"/>
             <EditText
@@ -104,6 +104,29 @@
                 android:gravity="center"
                 android:textAlignment="center"
                 android:textSize="20dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:textStyle="italic"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:text="@string/Date"
+                android:id="@+id/tvDateOutMoney"/>
+            <EditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:inputType="date"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/edtDateOutMoney"/>
         </LinearLayout>
        <!-- <LinearLayout
             android:layout_width="fill_parent"
@@ -143,7 +166,7 @@
                 android:layout_weight="2"
                 android:textAlignment="center"
                 android:textSize="15dp"
-                android:text="Thêm "
+                android:text="@string/add"
                 android:id="@+id/btnAddOutOne"/>
             <LinearLayout
                 android:layout_width="0dp"
@@ -154,7 +177,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:text="Hủy "
+                android:text="@string/Cancel"
                 android:textSize="15dp"
                 android:textAlignment="center"
                 android:id="@+id/btnCancelOutOne"/>

@@ -15,7 +15,7 @@ public class out_money extends AppCompatActivity {
 
     Button btnBack, btnAdd;
     ImageView imAn, imNha, imDien, imMua, imMang, imTv;
-    ImageButton btnAn, btnNha, btnDien, btnMua, btnMang, btnTv;
+    ImageButton btnAn, btnNha, btnDien, btnMua, btnMang, btnTv, imbtnAdd;
     TextView tvname, tvtitle, tv1,tv2,tv3,tv4,tv5,tv6;
     int checkValue;
     @Override
@@ -107,10 +107,17 @@ public class out_money extends AppCompatActivity {
         btnAdd.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(out_money.this, Shopping.class);
+                Intent in = new Intent(out_money.this, OutCustom.class);
                 checkValue = 6;
-                in.putExtra("Key", checkValue);
+              //  in.putExtra("Key", checkValue);
                 startActivity(in);
+            }
+        });
+        imbtnAdd.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(out_money.this, addNewAction.class);
+                startActivity(i);
             }
         });
     }
@@ -122,6 +129,7 @@ public class out_money extends AppCompatActivity {
         imNha.setImageResource(R.drawable.home);
         imDien.setImageResource(R.drawable.electric);
         imMua.setImageResource(R.drawable.shopping);
+        imbtnAdd.setImageResource(R.drawable.add);
 
         btnTv.setImageResource(R.drawable.addname);
         btnMang.setImageResource(R.drawable.addname);
@@ -132,6 +140,7 @@ public class out_money extends AppCompatActivity {
     }
 
     private void setID() {
+        imbtnAdd = (ImageButton) findViewById(R.id.imbtnAddNewAction);
         btnAdd = (Button) findViewById(R.id.btnThemnhieuOutmoney);
         btnBack = (Button) findViewById(R.id.btnTrolaiOutmoney);
         imAn = (ImageView) findViewById(R.id.imAnUong);

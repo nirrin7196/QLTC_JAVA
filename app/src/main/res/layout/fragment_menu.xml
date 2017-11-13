@@ -10,7 +10,7 @@
             android:layout_height="0dp"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Ví tiền "
+            android:text="@string/wallet"
             android:id="@+id/frbtnViTien"
             android:drawableLeft="@drawable/vitien"
             android:layout_weight="1"/>
@@ -21,7 +21,7 @@
             android:layout_weight="1"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Thu"
+            android:text="@string/add"
             android:id="@+id/frbtnThu"
             android:drawableLeft="@drawable/addmoney"/>
 
@@ -31,7 +31,7 @@
             android:layout_weight="1"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Chi"
+            android:text="@string/Spending"
             android:id="@+id/frbtnChi"
             android:drawableLeft="@drawable/chi"/>
         <Button
@@ -41,7 +41,7 @@
             android:id="@+id/frbtnTraCuu"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Tra Cứu "
+            android:text="@string/Look_up"
             android:drawableLeft="@drawable/tracuu"/>
 
         <Button
@@ -51,7 +51,7 @@
             android:id="@+id/frbtnCaiDat"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Cài đặt "
+            android:text="@string/setting"
             android:drawableLeft="@drawable/setting"/>
 
         <Button
@@ -60,7 +60,7 @@
             android:layout_height="0dp"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Giúp đỡ "
+            android:text="@string/help"
             android:id="@+id/frbtnGiupDo"
             android:drawableLeft="@drawable/help"/>
 
@@ -71,7 +71,7 @@
             android:id="@+id/frbtnThongTin"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Thông  Tin"
+            android:text="@string/Food"
             android:drawableLeft="@drawable/thongtin"/>
 
         <Button
@@ -81,6 +81,6 @@
             android:id="@+id/frbtnPhanHoi"
             android:background="#0000"
             android:textSize="20dp"
-            android:text="Phản hồi "
+            android:text="@string/feedback"
             android:drawableLeft="@drawable/phanhoi"/>
 </LinearLayout>

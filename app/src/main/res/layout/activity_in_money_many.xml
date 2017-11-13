@@ -27,7 +27,7 @@
             android:layout_height="match_parent"
             android:textAlignment="center"
             android:textSize="30dp"
-            android:text="Thêm khoảng thu "
+            android:text="@string/Add_new_money"
             android:textAllCaps="true"
             android:textStyle="bold"
             android:gravity="center"/>
@@ -54,7 +54,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:text="Chọn ví tiền : "
+                    android:text="@string/Chose_wallet"
                     android:textSize="20dp"
                     android:textStyle="italic"
                     android:textAlignment="center"/>
@@ -72,9 +72,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:text=" Số tiền : "
+                    android:text="@string/Money"
                     android:textSize="20dp"
                     android:textStyle="italic"
+                    android:layout_marginRight="10dp"
                     android:textAlignment="center"/>
                 <EditText
                     android:layout_width="0dp"
@@ -111,7 +112,7 @@
         android:gravity="center"
         android:textSize="20dp"
         android:textStyle="italic|bold"
-        android:text="Danh sách các ví tiền "/>
+        android:text="@string/List_walllet"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="fill_parent"
@@ -137,7 +138,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/btnHoanTatInMonyMany"
-            android:text="Hoàn tất "
+            android:text="@string/Finish"
             android:textSize="15dp"/>
         <LinearLayout
             android:layout_width="0dp"
@@ -147,7 +148,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Xóa tất cả "
+            android:text="@string/Delete_all"
             android:id="@+id/btnXoaInMoneyMany"/>
         <LinearLayout
             android:layout_width="0dp"

@@ -25,7 +25,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="4"
                 android:layout_height="wrap_content"
-                android:text="Danh sách các ví tiền "
+                android:text="@string/List_walllet"
                 android:textSize="30dp"
                 android:textAlignment="center"
                 android:gravity="center"

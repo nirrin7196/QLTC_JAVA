@@ -20,13 +20,13 @@
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/imbtnbackOutmoney"/>
+                android:id="@+id/imbtnAddNewAction"/>
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:textAlignment="center"
                 android:textSize="30dp"
-                android:text="Thêm khoảng thu mới"
+                android:text="@string/Add_new_spending"
                 android:id="@+id/tvOuttitle"
                 android:textStyle="bold"
                 android:gravity="center"/>
@@ -46,7 +46,7 @@
                 android:textSize="20dp"
                 android:textStyle="italic"
                 android:id="@+id/tvOutName"
-                android:text="Chọn loại chi tiêu"
+                android:text="@string/Chose_type_of_money"
                 android:textAlignment="center"
                 android:gravity="center"/>
         </LinearLayout>
@@ -64,7 +64,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="5"
                 android:id="@+id/tvOutAn"
-                android:text="Ăn uống "
+                android:text="@string/Food"
+                android:gravity="center"
                 android:textAlignment="center"
                 android:textSize="20dp"/>
             <ImageButton
@@ -85,7 +86,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
-                android:text="Mua Sắm "
+                android:gravity="center"
+                android:text="@string/Shopping"
                 android:id="@+id/tvOutMua"
                 android:textAlignment="center"
                 android:textSize="20dp"/>
@@ -108,7 +110,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
-                android:text="Điện nước "
+                android:gravity="center"
+                android:text="@string/Electric_water"
                 android:textAlignment="center"
                 android:textSize="20dp"/>
             <ImageButton
@@ -129,8 +132,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
-                android:text="Thuê nhà "
+                android:text="@string/House_rent"
                 android:id="@+id/tvOutNha"
+                android:gravity="center"
                 android:textAlignment="center"
                 android:textSize="20dp"/>
             <ImageButton
@@ -151,8 +155,9 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
-                android:text="Mạng "
+                android:text="@string/Internet"
                 android:id="@+id/tvOutMang"
+                android:gravity="center"
                 android:textAlignment="center"
                 android:textSize="20dp"/>
             <ImageButton
@@ -173,7 +178,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="5"
-                android:text="Truyền hình cáp "
+                android:text="@string/Capble_TV"
                 android:textAlignment="center"
                 android:textSize="20dp"
                 android:id="@+id/tvOutTV"/>
@@ -198,7 +203,7 @@
                 android:layout_height="match_parent"
                 android:textAlignment="center"
                 android:textSize="15dp"
-                android:text="Thêm nhiều "
+                android:text="@string/Add_many"
                 android:id="@+id/btnThemnhieuOutmoney"
                 />
             <LinearLayout
@@ -212,7 +217,7 @@
                 android:layout_height="match_parent"
                 android:textAlignment="center"
                 android:textSize="15dp"
-                android:text="Trở lại "
+                android:text="@string/Back"
                 android:id="@+id/btnTrolaiOutmoney"/>
             <LinearLayout
                 android:layout_width="0dp"

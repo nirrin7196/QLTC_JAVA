@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Thêm khoảng thu "
+                android:text="@string/Add_new_money"
                 android:textSize="30dp"
                 android:textAlignment="center"
                 android:textStyle="bold"
@@ -46,7 +46,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Chọn ví tiền:"
+                    android:text="@string/Chose_wallet"
                     android:textSize="20dp"
                     android:textStyle="italic"
                     android:textAlignment="center"
@@ -68,7 +68,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Số tiền :"
+                    android:text="@string/Money"
                     android:textSize="20dp"
                     android:textAlignment="center"
                     android:textStyle="italic"
@@ -91,7 +91,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Đơn vị :"
+                    android:text="@string/Unit"
                     android:textSize="20dp"
                     android:textStyle="italic"
                     android:textAlignment="center"
@@ -120,7 +120,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:id="@+id/btnAddOneInMoney"
-                android:text="Thêm "
+                android:text="@string/add"
                 android:textSize="15dp"
                 android:textAlignment="center"/>
             <LinearLayout
@@ -132,7 +132,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="2"
                 android:id="@+id/btnAddManyInMoney"
-                android:text="Thêm nhiều "
+                android:text="@string/Add_many"
                 android:textSize="15dp"
                 android:textAlignment="center"/>
             <LinearLayout

@@ -4,14 +4,18 @@ import com.example.thuongdh.adapter.Wallet_type_adapter;
 import com.example.thuongdh.model.Wallet_type;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +32,7 @@ public class Add extends AppCompatActivity {
     String Name;
     int Money =0;
     int id;
+    String lang;
     Wallet_type_adapter adapter;
     SQLiteDatabase database;
     public String Database_name = "QuanLyThuChiDb.sqlite";
@@ -35,11 +40,44 @@ public class Add extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        database = openOrCreateDatabase(Database_name, MODE_PRIVATE, null);
+        ChangeLanguage();
         setContentView(R.layout.activity_add);
+
         setID();
         setFont();
+
+
         setEvent();
     }
+
+    private void ChangeLanguage() {
+        lang = "English";
+        Cursor c = database.query("SettingTb",null,null,null,null,null,null);
+        if (c != null) {
+            while (c.moveToNext()) {
+                lang = c.getString(1);
+            }
+        }
+        //   Toast.makeText(Add.this, lang, Toast.LENGTH_SHORT).show();
+        if (lang.trim().equals("English")){
+            Locale l = new Locale("en");
+            Resources res = getResources();
+            DisplayMetrics dm = res.getDisplayMetrics();
+            Configuration conf = res.getConfiguration();
+            conf.locale = l;
+            res.updateConfiguration(conf, dm);
+        }
+        else {
+            Locale l = new Locale("vi");
+            Resources res = getResources();
+            DisplayMetrics dm = res.getDisplayMetrics();
+            Configuration conf = res.getConfiguration();
+            conf.locale = l;
+            res.updateConfiguration(conf, dm);
+        }
+    }
+
 
     private void setFont() {
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/ft.ttf");
@@ -54,7 +92,7 @@ public class Add extends AppCompatActivity {
 
     private void setEvent() {
         CancelValue();
-        OpenDatabase();
+
         //ReadDatabase();
        // ShowSpinner();
         GetValueFromScreen();
