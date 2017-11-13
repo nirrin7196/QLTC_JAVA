@@ -8,17 +8,19 @@
  <LinearLayout
      android:layout_width="fill_parent"
      android:layout_height="fill_parent"
-     android:orientation="vertical">
+     android:orientation="vertical"
+     android:background="#ffcc99">
      <LinearLayout
          android:layout_width="fill_parent"
          android:layout_height="0dp"
-         android:layout_weight="1">
+         android:layout_weight="1"
+         android:background="#00ff99">
          <TextView
              android:layout_width="fill_parent"
              android:layout_height="fill_parent"
              android:id="@+id/tvSetting"
              android:textSize="30dp"
-             android:text="Setting"
+             android:text="@string/setting"
              android:textAlignment="center"
              android:textStyle="bold"
              android:textAllCaps="true"
@@ -37,53 +39,141 @@
              android:layout_width="fill_parent"
              android:layout_height="0dp"
              android:orientation="horizontal"
-             android:layout_weight="2">
+             android:layout_weight="1">
              <TextView
-                 android:layout_width="wrap_content"
-                 android:layout_height="fill_parent"
-                 android:text="Background"
-                 android:textAlignment="center"
-                 android:textStyle="italic"
-                 android:textSize="20dp"
-                 android:layout_marginLeft="40dp"
-                 android:id="@+id/tvSetting_Background"/>
-             <Switch
-                 android:layout_width="fill_parent"
-                 android:layout_height="20dp"
-                 android:id="@+id/swBack_ground"
-                 android:textOn="Sang"
-                 android:textOff="toi"
-                 android:layout_marginLeft="100dp"
-                 android:layout_marginRight="10dp"/>
-         </LinearLayout>
-         <LinearLayout
-             android:layout_width="fill_parent"
-             android:layout_height="0dp"
-             android:orientation="horizontal"
-             android:layout_weight="2">
-             <TextView
-                 android:layout_width="wrap_content"
+                 android:layout_width="200dp"
                  android:layout_height="fill_parent"
                  android:id="@+id/tvSetting_Language"
-                 android:text="Ngon ngu"
+                 android:text="@string/Language"
                  android:textSize="20dp"
                  android:textStyle="italic"
-                 android:textAlignment="center"
-                 android:layout_marginLeft="40dp"
+                 android:gravity="center"
                  />
              <Spinner
                  android:layout_width="fill_parent"
                  android:layout_height="fill_parent"
                  android:id="@+id/spSetting_Language"
                  android:textAlignment="center"
+                 android:gravity="center"
                  android:layout_marginRight="10dp"
                  android:layout_marginLeft="30dp"></Spinner>
          </LinearLayout>
          <LinearLayout
              android:layout_width="fill_parent"
              android:layout_height="0dp"
+             android:layout_weight="1">
+             <TextView
+                 android:layout_width="200dp"
+                 android:layout_height="fill_parent"
+                 android:id="@+id/tvSettingNotification"
+                 android:text="@string/Notifacation"
+                 android:textAlignment="center"
+                 android:textSize="20dp"
+                 android:textStyle="italic"
+                 android:gravity="center"/>
+             <Switch
+                 android:layout_width="fill_parent"
+                 android:layout_height="fill_parent"
+                 android:id="@+id/swSettingNotifacation"
+                 android:layout_marginRight="10dp"
+                 android:layout_marginLeft="30dp"
+                 android:gravity="center"/>
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="0dp"
              android:layout_weight="1"></LinearLayout>
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="0dp"
+             android:layout_weight="1"
+             android:orientation="vertical">
+             <TextView
+                 android:layout_width="fill_parent"
+                 android:layout_height="5dp"
+                 android:background="#00ff99"/>
+             <TextView
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/tvSetting_pa"
+                 android:textStyle="italic|bold"
+                 android:textSize="20dp"
+                 android:textAlignment="center"
+                 android:gravity="center"
+                 android:text="@string/Show_info_lookup"/>
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="0dp"
+             android:layout_weight="1"></LinearLayout>
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="0dp"
+             android:layout_weight="1">
+             <TextView
+                 android:layout_width="200dp"
+                 android:layout_height="fill_parent"
+
+                 android:textSize="20dp"
+                 android:textStyle="italic"
+                 android:text="@string/default_unit"
+                 android:gravity="center"
+                 android:id="@+id/tvSettingUnit"/>
+             <Spinner
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/spSettingUnit"
+                 android:textAlignment="center"
+                 android:layout_marginLeft="100dp"></Spinner>
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="0dp"
+             android:layout_weight="1">
+             <TextView
+                 android:layout_width="200dp"
+                 android:layout_height="fill_parent"
+                 android:id="@+id/tvSettingViTien"
+                 android:text="@string/default_wallet"
+                 android:gravity="center"
+                 android:textAlignment="center"
+                 android:textSize="20dp"
+                 android:textStyle="italic"
+               />
+             <Spinner
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:id="@+id/spSettingViTien"
+                 android:textAlignment="center"
+                 android:gravity="center"
+                 android:layout_marginLeft="10dp"></Spinner>
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="fill_parent"
+             android:layout_height="0dp"
+             android:layout_weight="1">
+             <TextView
+                 android:layout_width="200dp"
+                 android:layout_height="fill_parent"
+                 android:id="@+id/tvSettingThoiGian"
+                 android:textAlignment="center"
+                 android:textStyle="italic"
+                 android:textSize="20dp"
+                 android:gravity="center"
+                 android:text="@string/default_time"/>
+             <Spinner
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textAlignment="center"
+                 android:id="@+id/spSettingThoiGian"
+                 android:layout_marginLeft="70dp">
+             </Spinner>
+         </LinearLayout>
      </LinearLayout>
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="0dp"
+         android:layout_weight="0.5"></LinearLayout>
      <LinearLayout
          android:layout_width="fill_parent"
          android:orientation="horizontal"
@@ -92,7 +182,8 @@
          <Button
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="Save"
+             android:text="@string/Save"
+             android:gravity="center"
              android:textAlignment="center"
              android:textStyle="bold"
              android:id="@+id/btnSettingSave"
@@ -103,8 +194,9 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:id="@+id/btnSettingCancel"
-             android:text="Cancel"
+             android:text="@string/Back"
              android:textSize="20dp"
+             android:gravity="center"
              android:textAlignment="center"
              android:textStyle="bold"
              android:layout_marginLeft="40dp"
@@ -113,7 +205,7 @@
      <LinearLayout
          android:layout_width="fill_parent"
          android:layout_height="0dp"
-         android:layout_weight="1"></LinearLayout>
+         android:layout_weight="0.5"></LinearLayout>
  </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
