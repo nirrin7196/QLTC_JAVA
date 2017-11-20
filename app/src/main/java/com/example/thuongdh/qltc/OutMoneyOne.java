@@ -1,6 +1,10 @@
 package com.example.thuongdh.qltc;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -22,7 +26,7 @@ import android.widget.Toast;
 public class OutMoneyOne extends AppCompatActivity {
     ImageButton imbtnback;
     TextView tvname;
-    EditText edtMoney;
+    EditText edtMoney, edtDate;
     DatePicker datePicker;
     Button btnAdd, btnCancel;
     String name;
@@ -30,8 +34,9 @@ public class OutMoneyOne extends AppCompatActivity {
     int k;
     public String Database_name = "QuanLyThuChiDb.sqlite";
     ArrayList<String> arrayListName;
-    SQLiteDatabase database;
     ArrayAdapter<String> adapterName;
+    SQLiteDatabase database;
+    String reportDate;
     int index;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,6 +120,8 @@ public class OutMoneyOne extends AppCompatActivity {
             values.put("ID", index);
             values.put("Name", name);
             values.put("Money", money);
+            values.put("DateUse",edtDate.getText().toString());
+            values.put("DateWrite", reportDate);
             database.insert("MemoryActionTb", null, values);
         }
     }
@@ -170,5 +177,10 @@ public class OutMoneyOne extends AppCompatActivity {
         btnAdd = (Button) findViewById(R.id.btnAddOutOne);
         btnCancel = (Button) findViewById(R.id.btnCancelOutOne);
         spinner = (Spinner) findViewById(R.id.spViTienOutOne);
+        edtDate = (EditText) findViewById(R.id.edtDateOutMoney);
+        DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
+        Date today = Calendar.getInstance().getTime();
+        reportDate = df.format(today);
+        edtDate.setText(reportDate);
     }
 }

@@ -25,11 +25,15 @@ import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class OutCustom extends AppCompatActivity implements ValuesWithActivity, ValuesWithActivityShopping, ValuesWithActivityOther {
-    TextView tv1, tv2, tv3;
+    TextView tv1, tv2, tv3, tv4;
+    ArrayList<String> arrayListName;
+    ArrayAdapter<String> adapterName;
+    Spinner sp;
     Button btnFood, btnShopping, btnOther, btnFinish, btnCancel;
     EditText edtDate;
     String Name, Type, date,reportDate;
@@ -94,10 +98,21 @@ public class OutCustom extends AppCompatActivity implements ValuesWithActivity, 
                     v.put("DateUse",edtDate.getText().toString());
                     v.put("DateWrite", reportDate);
                     database.insert("MemoryActionTb",null,v);
-                    Toast.makeText(OutCustom.this, "Done", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(OutCustom.this, out_money.class);
-                    startActivity(intent);
+                    Cursor cursor = database.rawQuery("select * from NameListTb where TRIM(Name) = '" + sp.getSelectedItem().toString().trim() + "'", null);
+                    cursor.moveToFirst();
+
+                    int old = cursor.getInt(2);
+                    int money1 = old - money;
+                    ContentValues values = new ContentValues();
+                    values.put("Money", money1);
+                    cursor.close();
+                    database.update("NameListTb", values, "Name=?", new String[]{sp.getSelectedItem().toString()});
+
+
                 }
+                Toast.makeText(OutCustom.this, "Done", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(OutCustom.this, out_money.class);
+                startActivity(intent);
             }
         });
 
@@ -109,6 +124,22 @@ public class OutCustom extends AppCompatActivity implements ValuesWithActivity, 
         while (c.moveToNext()){
             arrAction.add(c.getString(1));
         }
+        arrayListName = new ArrayList<>();
+       /* database = openOrCreateDatabase(Database_name, MODE_PRIVATE, null);*/
+        Cursor cursor =  database.query("NameListTb", null, null, null, null, null,null);
+        while (cursor.moveToNext())
+        {
+            String name = cursor.getString(1);
+            arrayListName.add(name);
+        }
+        cursor.close();
+
+        adapterName = new ArrayAdapter<String>(
+                OutCustom.this,
+                android.R.layout.simple_spinner_dropdown_item,
+                arrayListName);
+        adapterName.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sp.setAdapter(adapterName);
     }
 
     private void setFragment() {
@@ -151,6 +182,7 @@ public class OutCustom extends AppCompatActivity implements ValuesWithActivity, 
         tv1.setTypeface(typeface);
         tv2.setTypeface(typeface);
         tv3.setTypeface(typeface);
+        tv4.setTypeface(typeface);
         btnShopping.setTypeface(typeface);
         btnOther.setTypeface(typeface);
         btnFood.setTypeface(typeface);
@@ -171,6 +203,8 @@ public class OutCustom extends AppCompatActivity implements ValuesWithActivity, 
         btnOther = (Button) findViewById(R.id.btnCustomOther);
         btnShopping = (Button) findViewById(R.id.btnCustomShopping);
         valuesToAddDatabase = new ArrayList<String>();
+        tv4 = (TextView) findViewById(R.id.tvCustomWallet);
+        sp = (Spinner) findViewById(R.id.spCustomWallet);
     }
 
 
