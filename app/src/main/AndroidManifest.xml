@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.thuongdh.qltc">
+    package="com.example.thuongdh.qltc">
 
     <application
         android:allowBackup="true"
@@ -12,29 +12,24 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StartActivity"/>
-        <activity android:name=".SettingActivity"/>
-        <activity android:name=".Add"/>
-        <activity android:name=".wallet"/>
-        <activity android:name=".InMoney">
-        </activity>
-        <activity android:name=".InMoneyMany">
-        </activity>
-        <activity android:name=".out_money">
-        </activity>
-        <activity android:name=".OutMoneyOne">
-        </activity>
-        <activity android:name=".Shopping">
-        </activity>
-        <activity android:name=".addNewAction">
-        </activity>
-        <activity android:name=".OutCustom">
-        </activity>
+        <activity android:name=".StartActivity" />
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".Add" />
+        <activity android:name=".wallet" />
+        <activity android:name=".InMoney" />
+        <activity android:name=".InMoneyMany" />
+        <activity android:name=".out_money" />
+        <activity android:name=".OutMoneyOne" />
+        <activity android:name=".Shopping" />
+        <activity android:name=".addNewAction" />
+        <activity android:name=".OutCustom" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".InformationActivity"></activity>
     </application>
 
 </manifest>

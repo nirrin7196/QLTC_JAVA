@@ -2,6 +2,7 @@ package com.example.thuongdh.qltc;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -35,7 +36,7 @@ public class fragment extends Fragment {
         return myv;
     }
 
-   /* private void setFont() {
+    /*private void setFont() {
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/ft.ttf");
         btnCaiDat.setTypeface(typeface);
         btnChi.setTypeface(typeface);
@@ -72,6 +73,20 @@ public class fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), out_money.class);
+                startActivity(intent);
+            }
+        });
+        btnGiupDo.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), HelpActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnThongTin.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), InformationActivity.class);
                 startActivity(intent);
             }
         });
