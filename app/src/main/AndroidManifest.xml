@@ -29,7 +29,8 @@
         <activity android:name=".addNewAction" />
         <activity android:name=".OutCustom" />
         <activity android:name=".HelpActivity" />
-        <activity android:name=".InformationActivity"></activity>
+        <activity android:name=".InformationActivity" />
+        <activity android:name=".ChartActivity"></activity>
     </application>
 
 </manifest>

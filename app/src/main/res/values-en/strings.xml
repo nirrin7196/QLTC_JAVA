@@ -57,4 +57,12 @@
     <string name="list_other">List of Another</string>
     <string name="name">Name</string>
     <string name="price">Price</string>
+    <string name="Status">Status</string>
+    <string name="MoneyCount">Total Money</string>
+    <string name="SpendingCount">Total Spending</string>
+    <string name="Rest">Rest Money</string>
+    <string name="Condition">Please choose a condition to look up</string>
+    <string name="Time">Time</string>
+    <string name="from">From:</string>
+    <string name="to">"To: "</string>
 </resources>

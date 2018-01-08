@@ -1,15 +1,5 @@
 package com.example.thuongdh.qltc;
 
-import com.example.thuongdh.qltc.fragment_food.ValuesWithActivity;
-import com.example.thuongdh.qltc.fragment_other.ValuesWithActivityOther;
-import com.example.thuongdh.qltc.fragment_shopping.ValuesWithActivityShopping;
-
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -28,6 +18,16 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.thuongdh.qltc.fragment_food.ValuesWithActivity;
+import com.example.thuongdh.qltc.fragment_other.ValuesWithActivityOther;
+import com.example.thuongdh.qltc.fragment_shopping.ValuesWithActivityShopping;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class OutCustom extends AppCompatActivity implements ValuesWithActivity, ValuesWithActivityShopping, ValuesWithActivityOther {
     TextView tv1, tv2, tv3, tv4;
@@ -89,15 +89,20 @@ public class OutCustom extends AppCompatActivity implements ValuesWithActivity, 
                     ContentValues v = new ContentValues();
                     String s = valuesToAddDatabase.get(i);
                     int k = s.indexOf(";");
+                    String gj = null;
                     Type = s.substring(0,k);
+                    index ++;
                     Name = s.substring(k+1, s.lastIndexOf(";"));
                     money = Integer.parseInt(s.substring(s.lastIndexOf(";")+1, s.length()));
-                    v.put("ID", index++);
+                    v.put("ID", index);
                     v.put("Name",Name);
                     v.put("Money", money);
-                    v.put("DateUse",edtDate.getText().toString());
+                    //v.put("DateUse","'" + edtDate.getText().toString().replace("/","-") + "'");
+                    v.put("DateUse", edtDate.getText().toString().replace("/","-"));
                     v.put("DateWrite", reportDate);
                     database.insert("MemoryActionTb",null,v);
+
+
                     Cursor cursor = database.rawQuery("select * from NameListTb where TRIM(Name) = '" + sp.getSelectedItem().toString().trim() + "'", null);
                     cursor.moveToFirst();
 

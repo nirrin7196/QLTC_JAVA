@@ -1,11 +1,5 @@
 package com.example.thuongdh.qltc;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -22,6 +16,12 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class OutMoneyOne extends AppCompatActivity {
     ImageButton imbtnback;
@@ -96,6 +96,7 @@ public class OutMoneyOne extends AppCompatActivity {
         {
             index = c.getInt(0);
         }
+        index ++;
         c.close();
         try {
             SaveData();
@@ -123,6 +124,9 @@ public class OutMoneyOne extends AppCompatActivity {
             values.put("DateUse",edtDate.getText().toString());
             values.put("DateWrite", reportDate);
             database.insert("MemoryActionTb", null, values);
+
+
+
         }
     }
 

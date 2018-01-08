@@ -4,6 +4,8 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="fill_parent"
+    android:background="#32d1a9"
+    android:id="@+id/fr"
     >
         <Button
             android:layout_width="wrap_content"
@@ -74,13 +76,13 @@
             android:text="@string/information"
             android:drawableLeft="@drawable/thongtin"/>
 
-        <Button
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:id="@+id/frbtnPhanHoi"
-            android:background="#0000"
-            android:textSize="20dp"
-            android:text="@string/feedback"
-            android:drawableLeft="@drawable/phanhoi"/>
+        <!--<Button-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="0dp"-->
+            <!--android:id="@+id/frbtnPhanHoi"-->
+            <!--android:background="#0000"-->
+            <!--android:textSize="20dp"-->
+            <!--android:text="@string/feedback"-->
+            <!--android:drawableLeft="@drawable/phanhoi"/>-->
 </LinearLayout>

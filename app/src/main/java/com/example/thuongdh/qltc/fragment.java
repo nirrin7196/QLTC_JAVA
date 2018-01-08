@@ -2,7 +2,6 @@ package com.example.thuongdh.qltc;
 
 import android.app.Fragment;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -26,7 +25,7 @@ public class fragment extends Fragment {
         btnThongTin = myv.findViewById(R.id.frbtnThongTin);
         btnCaiDat = myv.findViewById(R.id.frbtnCaiDat);
         btnGiupDo = myv.findViewById(R.id.frbtnGiupDo);
-        btnPhanHoi = myv.findViewById(R.id.frbtnPhanHoi);
+       // btnPhanHoi = myv.findViewById(R.id.frbtnPhanHoi);
         btnTraCuu = myv.findViewById(R.id.frbtnTraCuu);
         btnThu = myv.findViewById(R.id.frbtnThu);
         btnViTien = myv.findViewById(R.id.frbtnViTien);
@@ -87,6 +86,13 @@ public class fragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), InformationActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnTraCuu.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ChartActivity.class);
                 startActivity(intent);
             }
         });

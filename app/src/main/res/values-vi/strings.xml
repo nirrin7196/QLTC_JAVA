@@ -57,4 +57,12 @@
     <string name="list_other">Danh sách khác</string>
     <string name="name">Tên</string>
     <string name="price">Giá tiền</string>
+    <string name="Status">Tình trạng</string>
+    <string name="MoneyCount">Tổng số tiền</string>
+    <string name="SpendingCount">Tổng số tiền đã chi</string>
+    <string name="Rest">Số tiền còn lại</string>
+    <string name="Condition">Vui lòng chọn điều kiện tra cứu</string>
+    <string name="Time">Thời gian</string>
+    <string name="from">Từ:</string>
+    <string name="to">Đến</string>
 </resources>
